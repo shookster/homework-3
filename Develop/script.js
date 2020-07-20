@@ -22,7 +22,7 @@ function generatePassword() {
 
   let password = ''
 
-  for(var i = 0; <= complexity; i++){
+  for(var i = 0; >= complexity; i++){
     password = values.charAt(Math.floor(Math.random() * Math.floor(value.length - 1)))
   }
 
