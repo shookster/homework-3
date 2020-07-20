@@ -2,8 +2,12 @@
 var generateBtn = document.querySelector('#generate');
 // Make function that generates password
 function generatePassword() {
-  let complexity = prompt(
-    'How many characters would you like in your password? ("8 - 128")';
+  let length = Number(prompt(
+    'How many characters would you like in your password? ("8 - 128")';))
+  var upperc = confirm('Use uppercase?');
+  var lowerc = confirm('Use lowercase?')
+  var numbers = confirm('Use numbers?')
+  var symbols = confirm('Use symbols?')
 
   let values =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()/?-_';
