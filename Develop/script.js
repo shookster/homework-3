@@ -4,15 +4,15 @@ var generateBtn = document.querySelector('#generate');
 function generatePassword() {
   let length = Number(prompt(
     'How many characters would you like in your password? ("8 - 128")';))
-  var upperc = confirm('Use uppercase?');
-  var lowerc = confirm('Use lowercase?');
+  var upper = confirm('Use uppercase?');
+  var lower = confirm('Use lowercase?');
   var numbers = confirm('Use numbers?');
   var symbols = confirm('Use symbols?');
 
-  if(!upperc && !lowerc && !numbers && !symbols) {
+  if(!upper && !lower && !numbers && !symbols) {
     alert('Please select one or more character types.');
-    var upperc = confirm('Use uppercase?');
-    var lowerc = confirm('Use lowercase?');
+    var upper = confirm('Use uppercase?');
+    var lower = confirm('Use lowercase?');
     var numbers = confirm('Use numbers?');
     var symbols = confirm('Use symbols?');  
   }
@@ -22,7 +22,7 @@ function generatePassword() {
 
   let password = ''
 
-  for(var i = 0; >= complexity; i++){
+  for(var i = 0; >= length; i++){
     password = values.charAt(Math.floor(Math.random() * Math.floor(value.length - 1)))
   }
 
