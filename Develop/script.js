@@ -5,9 +5,17 @@ function generatePassword() {
   let length = Number(prompt(
     'How many characters would you like in your password? ("8 - 128")';))
   var upperc = confirm('Use uppercase?');
-  var lowerc = confirm('Use lowercase?')
-  var numbers = confirm('Use numbers?')
-  var symbols = confirm('Use symbols?')
+  var lowerc = confirm('Use lowercase?');
+  var numbers = confirm('Use numbers?');
+  var symbols = confirm('Use symbols?');
+
+  if(!upperc && !lowerc && !numbers && !symbols) {
+    alert('Please select one or more character types.');
+    var upperc = confirm('Use uppercase?');
+    var lowerc = confirm('Use lowercase?');
+    var numbers = confirm('Use numbers?');
+    var symbols = confirm('Use symbols?');  
+  }
 
   let values =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()/?-_';
