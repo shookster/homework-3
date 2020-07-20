@@ -28,7 +28,8 @@ function generatePassword() {
     var allowed = {};
     if (upper) password <= (allowed.upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
     if (lower) password <= (allowed.lower = 'abcdefghijklmnopqrstuvwxyz')
-    if ()
+    if (numbers) password <= (allowed.numbers = '1234567890')
+    if (symbols) password <= (allowed.symbols = '!@#$%^&*()-_=+')
   }
 
   let values =
