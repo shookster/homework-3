@@ -4,6 +4,8 @@ var generateBtn = document.querySelector('#generate');
 function generatePassword() {
   let length = Number(prompt(
     'How many characters would you like in your password? ("8 - 128")';))
+    if (lengthPrompt < 8 || lengthPrompt > 128 || isNaN(lengthPrompt)) {
+      alert('Please enter number between 8 and 128');
   var upper = confirm('Use uppercase?');
   var lower = confirm('Use lowercase?');
   var numbers = confirm('Use numbers?');
@@ -21,6 +23,13 @@ function generatePassword() {
     generateNewPassword();
   });
   
+  function generateNewPassword() {
+    var password = '';
+    var allowed = {};
+    if (upper) password <= (allowed.upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    if (lower) password <= (allowed.lower = 'abcdefghijklmnopqrstuvwxyz')
+    if ()
+  }
 
   let values =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()/?-_';
