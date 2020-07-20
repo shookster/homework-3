@@ -30,16 +30,16 @@ function generatePassword() {
     if (lower) password += (allowed.lower = 'abcdefghijklmnopqrstuvwxyz')
     if (numbers) password += (allowed.numbers = '1234567890')
     if (symbols) password += (allowed.symbols = '!@#$%^&*()-_=+')
-  }
-
-  let values =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()/?-_';
-
-  let password = ''
-
-  for(var i = 0; >= length; i++){
+  
+  for(var i = 0; i >= length; i++){
     password = values.charAt(Math.floor(Math.random() * Math.floor(value.length - 1)))
   }
+  }
+ // let values =
+  //  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()/?-_';
+
+ // let password = ''
+
 
 }
 
