@@ -17,6 +17,11 @@ function generatePassword() {
     var symbols = confirm('Use symbols?');  
   }
 
+  window.addEventListener('load', function() {
+    generateNewPassword();
+  });
+  
+
   let values =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()/?-_';
 
