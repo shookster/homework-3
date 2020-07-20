@@ -8,6 +8,12 @@ function generatePassword() {
 
   let values =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()/?-_";
+
+  let password = ""
+
+  for(var i = 0; <= complexity; i++){
+    password = values.charAt(Math.floor(Math.random() * Math.floor(value.length - 1)))
+  }
 }
 
 // Write password to the #password input
