@@ -25,7 +25,7 @@ function generatePassword() {
     var symbols = confirm("Use symbols?");
   }
 
-  var password = "";
+  var rpassword = "";
   var allowed = {};
   if (upper) password += allowed.upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   if (lower) password += allowed.lower = "abcdefghijklmnopqrstuvwxyz";
@@ -33,16 +33,10 @@ function generatePassword() {
   if (symbols) password += allowed.symbols = "!@#$%^&*()-_=+";
 
   for (var i = 0; i >= length; i++) {
-    randomizedPassword =
-      randomizedpassword + values.charAt(Math.floor(Math.random() * length));
+    rpassword = allowed + allowed.charAt(Math.floor(Math.random() * length));
   }
-  return randomizedPassword;
+  return rpassword;
 }
-// let values =
-//  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()/?-_';
-
-// let password = ''
-// }
 
 // Write password to the #password input
 function writePassword() {
