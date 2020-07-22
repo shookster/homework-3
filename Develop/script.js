@@ -12,20 +12,20 @@ function generatePassword() {
       "How many characters would you like in your password? (8 - 128)"
     );
 
-    var upper = confirm("Use uppercase?");
-    var lower = confirm("Use lowercase?");
-    var numbers = confirm("Use numbers?");
-    var symbols = confirm("Use symbols?");
+    var confirmUpper = confirm("Use uppercase?");
+    var confirmLower = confirm("Use lowercase?");
+    var confirmNumbers = confirm("Use numbers?");
+    var confirmSymbols = confirm("Use symbols?");
   }
-  while (!upper && !lower && !numbers && !symbols) {
+  while (!confirmUpper && !confirmLower && !confirmNumbers && !confirmSymbols) {
     alert("Please select one or more character types.");
-    var upper = confirm("Use uppercase?");
-    var lower = confirm("Use lowercase?");
-    var numbers = confirm("Use numbers?");
-    var symbols = confirm("Use symbols?");
+    var confirmUpper = confirm("Use uppercase?");
+    var confirmLower = confirm("Use lowercase?");
+    var confirmNumbers = confirm("Use numbers?");
+    var confirmSymbols = confirm("Use symbols?");
   }
 
-  var rpassword = "";
+  var passChar = [];
   var upper = [
     "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z",
   ];
@@ -34,15 +34,23 @@ function generatePassword() {
   ];
   var numbers = ["1, 2, 3, 4, 5, 6, 7, 8, 9, 0"];
   var symbols = ["!, @, #, $, %, ^, &, *, (, ), -, _, =, +"];
-  if (upper) rpassword += upper;
-  if (lower) rpassword += lower;
-  if (numbers) rpassword += numbers;
-  if (symbols) rpassword += symbols;
+  if (confirmSymbols) {
+    passChar = passChar.concat(upper);
+  }
+  if (confirmLower) {
+    passChar = passChar.concat(lower);
+  }
+  if (confirmNumbers) {
+    passChar = passChar.concat(numbers);
+  }
+  if (confirmSymbols) {
+    passChar = passChar.concat(symbols);
+  }
 
   for (var i = 0; i < length; i++) {
-    rpassword += rpassword.charAt(Math.floor(Math.random() * rpassword.length));
+    rPassword += passChar[Math.floor(Math.random() * passChar.length)];
   }
-  console.log(rpassword);
+  return rPassword;
 }
 
 // Write password to the #password input
