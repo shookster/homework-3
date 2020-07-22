@@ -17,7 +17,7 @@ function generatePassword() {
     var numbers = confirm("Use numbers?");
     var symbols = confirm("Use symbols?");
   }
-  if (!upper && !lower && !numbers && !symbols) {
+  while (!upper && !lower && !numbers && !symbols) {
     alert("Please select one or more character types.");
     var upper = confirm("Use uppercase?");
     var lower = confirm("Use lowercase?");
