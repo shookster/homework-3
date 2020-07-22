@@ -33,9 +33,10 @@ function generatePassword() {
   if (symbols) password += allowed.symbols = "!@#$%^&*()-_=+";
 
   for (var i = 0; i >= length; i++) {
-    password = password + values.charAt(Math.floor(Math.random() * length));
+    randomizedPassword =
+      randomizedpassword + values.charAt(Math.floor(Math.random() * length));
   }
-  return finalPassword;
+  return randomizedPassword;
 }
 // let values =
 //  'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()/?-_';
