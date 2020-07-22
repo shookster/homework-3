@@ -32,10 +32,9 @@ function generatePassword() {
   if (numbers) password += allowed.numbers = "1234567890";
   if (symbols) password += allowed.symbols = "!@#$%^&*()-_=+";
 
-  for (var i = 0; i >= length; i++) {
+  for (var i = 0; i < length; i++) {
     rpassword = allowed + allowed.charAt(Math.floor(Math.random() * length));
   }
-  return rpassword;
 }
 
 // Write password to the #password input
